@@ -1,22 +1,13 @@
-name: Lint
-
-on:
-  pull_request:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
-  eslint:
+  lint:
     runs-on: ubuntu-latest
+    name: Run eslint
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
-          node-version: 16
-      - run: npm ci # or yarn install
-      - uses: sibiraj-s/action-eslint@v3
-        with:
-          eslint-args: '--ignore-path=.gitignore --quiet'
-          extensions: 'js,jsx,ts,tsx'
-          annotations: true
+          node-version: '13.x'
+      - run: yarn
+      - run: yarn lint
