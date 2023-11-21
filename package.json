@@ -6,6 +6,7 @@
   "author": "Ben Lloyd Pearson <ben.pearson@linearb.io>",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^8.54.0",
     "lint": "^0.8.19"
   }
 }
