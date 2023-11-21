@@ -1,0 +1,8 @@
+{
+  "name": "javascript-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:blp-test-dev/javascript-testing.git",
+  "author": "Ben Lloyd Pearson <ben.pearson@linearb.io>",
+  "license": "MIT"
+}
