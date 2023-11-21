@@ -1,13 +1,11 @@
-on: [push]
-
+name: CI
+on: push
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
-    name: Run eslint
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '16.0.0'
-      - run: yarn
-      - run: yarn eslint
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: yarn
+    - name: Run ESLint
+      run: yarn eslint . --ext .js,.jsx,.ts,.tsx
